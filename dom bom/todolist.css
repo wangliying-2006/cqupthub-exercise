@@ -1,0 +1,75 @@
+.todo-plus-icon{
+    width: 30px;
+}
+.todo-icon{
+    width: 20px;
+}
+.star-icon{
+    width: 20px;
+}
+.container{
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: bisque;
+    border-radius: 10px;
+    padding: 20px
+}
+.header{
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 20px;
+}
+.left-header h1{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 25px;
+}
+.left-header .myday{
+    font-size: small;
+}
+body{
+    color: rgba(57, 53, 53, 0.946);
+}
+.new-task{
+    display: flex;
+    border-bottom: 1px solid rgb(173, 167, 167);
+
+}
+.new-task input{
+    border:none;
+    outline: none;
+    width: 300px;
+    background-color: bisque;
+}
+.todo-item{
+    display: flex;
+    border-bottom:1px solid rgb(173, 167, 167);
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.todo-content{
+    flex:10;
+}
+.todo-item-icon{
+    display: flex;
+    align-items: center;
+}
+.todo-star-icon{
+    display: flex;
+    align-items: center;
+}
+.todo-text{
+    font-size: 14px;
+}
+.todo-type{
+    font-size: 12px;
+    color: rgb(125, 122, 122);
+}
+.header{
+    display: flex;
+    align-items: center;
+}
+.todo-template{
+    display: none;
+}

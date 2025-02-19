@@ -29,7 +29,8 @@ function findHighestScoreStudent(students) {
 function sortStudentsByScore(students) {
     return students.sort((a, b) => b.score - a.score);
 }
-console.log('所有学生的平均成绩为：' + calculateAverageScore(students));
+console.log('所有学生的平均成绩为：' );
+console.log(calculateAverageScore(students));
 console.log('成绩最高的学生信息：');
 console.log(findHighestScoreStudent(students));
 console.log('按成绩从高到低排序后的学生信息：');
