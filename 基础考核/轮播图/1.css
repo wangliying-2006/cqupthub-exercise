@@ -1,0 +1,60 @@
+.box {
+    position: relative;
+    width: 400px; /* 轮播图的宽度 */
+    height: 260px; /* 轮播图的高度 */
+    display: flex; /* 使用flex布局 */
+    overflow: hidden; /* 防止内容溢出 */
+}
+
+.box-img {
+    position: absolute;
+    width: 400px; /* 每张图片的宽度 */
+    height: 260px; /* 每张图片的高度 */
+    transition: transform 0.5s ease; /* 平滑过渡效果 */
+}
+
+.box-left, .box-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.box-left {
+    left: 0;
+}
+
+.box-right {
+    right: 0;
+}
+
+.box-zhiding {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.box-zhiding ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.box-zhiding ul li {
+    width: 10px;
+    height: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.box-zhiding ul li.active {
+    background-color: white;
+}
