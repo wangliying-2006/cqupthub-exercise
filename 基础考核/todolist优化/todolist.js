@@ -7,8 +7,15 @@ window.onload = function () {
             let newTaskContainer = template.cloneNode(true);
             let newTaskNode = newTaskContainer.querySelector('.todo-item');
             newTaskNode.querySelector('.todo-text').innerText = newTaskText;
+            // 添加时间戳
+            let timestamp = new Date().toLocaleString(); // 获取当前时间
+            let timestampElement = document.createElement('span'); // 创建时间戳元素
+            timestampElement.className = 'timestamp'; // 添加类名
+            timestampElement.innerText = ` - ${timestamp}`; // 设置时间戳文本
+            newTaskNode.querySelector('.todo-text').appendChild(timestampElement); // 将时间戳添加到任务文本旁边
             let firstTodo = document.querySelector('.todo-list .todo-item');
             document.querySelector('.todo-list').insertBefore(newTaskNode, firstTodo);
+            newTaskInput.value=' ';
             //绑定点击事件
             let icon = newTaskNode.querySelector('.todo-icon');
             icon.onclick = function (event) {
@@ -27,7 +34,17 @@ window.onload = function () {
                     document.querySelector('.done-list').appendChild(icon.parentElement.parentElement);
                 }
             };
-            
+            let icons = newTaskNode.querySelector('.star-icon');
+            icons.onclick = function (event) {
+                if (icons.src.includes('multimedia')) {
+                    icons.setAttribute('src', 'star-128.webp');
+                    
+                } 
+                else {
+                    icons.setAttribute('src', 'multimedia-19-128.webp');
+                    
+                }
+            };
         }
     };
     let todoItemIcons = document.querySelectorAll('.todo-list .todo-icon');
@@ -49,5 +66,19 @@ window.onload = function () {
                 }
             
         }
+        
+    });
+    let staricons= document.querySelectorAll('.todo-list .star-icon');
+    staricons.forEach(function (staricons) {
+        staricons.onclick = function (event) {
+            if (staricons.src.includes('multimedia')) {
+                staricons.setAttribute('src', 'star-128.webp');
+                
+            } 
+            else {
+                staricons.setAttribute('src', 'multimedia-19-128.webp');
+                
+            }
+        };
     });
 }
